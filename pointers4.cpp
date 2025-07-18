@@ -7,7 +7,8 @@ int main(){
     *pNum = 10;
 
     if(pNum == NULL){
-        std::cout<<"The variable is not yet assign with memory address.";
+        std::cout<<"The variable is not yet assign with memory address.\n";
+        std::cout<<"Memory address: "<<pNum;
     }
     else{
         std::cout<<"The memory address has successfully assigned.\n";
