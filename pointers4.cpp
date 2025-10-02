@@ -15,7 +15,7 @@ int main(){
         std::cout<<"Current memory address: "<<pNum<<"\n";
         std::cout<<"Stored value: "<<*pNum;
     }
-    delete pNum;
+    delete[] pNum;
 
     return 0;
 }
