@@ -1,30 +1,30 @@
 #include <iostream>
-using std::cout;
 
 int main(){
+    //Symbol ampersand
+    //& - address-of operator (akan print output pointer memory address)
 
-    //& - address-of operator (display the memory address for pointer variables)
-    //* - dereference operator (display the variable value of the pointer)
-
+    //Symbol asterisk
+    //* - dereference operator (print output pointer value)
     std::string name = "Aqmal";
     std::string* pName = &name;
-    //std::string* ptr = &name;
 
-    cout<<*pName;
-    //cout<< &ptr;
+    std::cout<<*pName<<"\n";
 
     int age = 19;
     int* page = &age;
+    std::cout<< *page<<"\n";
 
-    cout<< *page;
+    //Kita tidak assign ampersand untuk array, kerana array sudah ada address
+    //Array sudah di allocated didalam stack memory, which memory tu sendiri sudah ada address.
+    std::string FreeFood[5] = {"pizza", "hamburger", "macaroni", "pasta", "burrito"};
+    std::string* pFreeFood = FreeFood;
 
-    //we don't assign ampersand for array, as the array is already an address
-    std::string letters[3] = {"A", "B", "C"};
-    //std::string* ptr = letters;
-    std::string* pletters = letters;
+    std::cout<<*(pFreeFood+0)<<'\n';
 
-    cout<<*pletters;
-    //cout<<*ptr;
+    //Special cases
+    const char* pGrades[3] = {"A", "B", "C"};
+    std::cout<<*pGrades<<"\n";
 
     return 0;
 }
